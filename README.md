@@ -3,7 +3,7 @@
 
 This is a simple example plugin that provies two themes to Torque Pro
 
-You will need at least Torque 1.10.260 for these themes to function - this is currently in Beta expected for release around the 24th Jan
+You will need at least Torque 1.10.260 for these themes to function - this is currently expected for beta release around the 24th Jan 2022 - make sure you join the beta track!
 
 
 
