@@ -1,5 +1,5 @@
 # torque-theme-plugin
-## An example plugin to provide themes to Torque Pro on Android
+## An example plugin to provide themes to [Torque Pro](https://play.google.com/store/apps/details?id=org.prowl.torque) on Android
 
 This is a simple example plugin that provies two themes to Torque Pro
 
