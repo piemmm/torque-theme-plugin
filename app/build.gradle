@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "org.prowl.themeexampleplugin"
+        minSdkVersion 19
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            // Used to strip out stuff you don't want (debug, etc)
+            // *** REMEMBER *** to change the package names in proguard-rules.pro to your package name
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '31.0.0'
+
+    aaptOptions {
+        //Note: There is a gotcha in this, in that if you don't have these options, and have a fresh
+        // installation of the app, and *then* you enable the noCompress option, *you must uninstall
+        // the app plugin first* due to some weird caching on asset compressed/uncompressed states in
+        // android resulting in it thinking an asset is compressed when it actually no longer is.
+
+        // Don't compress assets otherwise the import of the theme will fail
+        noCompress '.txt', '.ttf', '.png', '.jpg'
+
+        // Alternatively, don't compress anything.
+        //additionalParameters "--no-compress"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

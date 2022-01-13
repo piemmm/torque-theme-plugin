@@ -1,0 +1,4 @@
+name=My first plugin theme!
+description=This is the first theme, same as the green theme on the theme server as an example
+author=Someone being held in a software factory, in 3D!
+

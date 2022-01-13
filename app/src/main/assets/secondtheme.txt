@@ -1,0 +1,4 @@
+name=My second theme in blue!
+description=This is the final installment of two custom made themes, this time it's blue!
+author=Someone who's script went mad!
+
